@@ -10,7 +10,7 @@
       $scope.openModal = openModal;
       $scope.deleteUser = deleteUser;
 
-      $scope.levels = [0,1,2];
+      $scope.levels = [0, 1, 2];
       $scope.users = UsersFactory;
       $scope.newuser = {
         name: '',
@@ -20,10 +20,10 @@
       };
 
       function getUsers() {
-        return $scope.users.filter((user)=>{
+        return $scope.users.filter((user) => {
           if (!$scope.search) return true;
-          for(let attr in user){
-            let prop  = user[attr].toString().toLocaleLowerCase();
+          for (let attr in user) {
+            let prop = user[attr].toString().toLocaleLowerCase();
             if (prop.indexOf($scope.search) !== -1) return true
           }
           return false;
@@ -31,12 +31,12 @@
       }
 
       function deleteUser(id) {
-        let index = $scope.users.findIndex((user)=> user.id == id);
-        if (index){
-          $scope.users.splice(index,1);
+        let index = $scope.users.findIndex((user) => user.id == id);
+        if (index >= 0) {
+          $scope.users.splice(index, 1);
         }
       }
-      
+
       function openModal(user) {
         $uibModal.open({
           animation: true,
