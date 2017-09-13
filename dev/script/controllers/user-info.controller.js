@@ -4,13 +4,14 @@
   /**@ngInject*/
 
   app
-    .controller('UserInfoCtrl', (user, $scope, $uibModalInstance, UsersFactory) => {
+    .controller('UserInfoCtrl', (user, $scope, $uibModalInstance, UsersFactory, SKILLS) => {
 
       $scope.close = close;
       $scope.getArray = getArray;
       $scope.saveUser = saveUser;
 
       $scope.user = angular.copy(user);
+      $scope.skills = SKILLS;
 
       function close() {
         $uibModalInstance.close();
@@ -34,11 +35,11 @@
         close();
       }
 
-      function getArray(count) {
+      function getArray(count, inc) {
         let array = new Array(count);
         array.fill(1);
         array.forEach((item, index) => {
-          array[index] = index + 1;
+          array[index] = index + inc;
         });
         return array;
       }

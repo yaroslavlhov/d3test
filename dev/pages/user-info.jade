@@ -12,14 +12,15 @@
       input.form-control(type="text" ng-model="user.name" placeholder="Input name here")
     .col-sm-6
       label Age
-      select.form-control(ng-options="age as age for age in getArray(99)" ng-model="user.age")
+      select.form-control(ng-options="age as age for age in getArray(83,18)" ng-model="user.age")
   .row.mt-10
     .col-sm-6
       label Skill
-      input.form-control(type="text" ng-model="user.skill" placeholder="Input skill here")
+      select.form-control(ng-options="skill.name as skill.name for skill in skills" ng-model="user.skill")
+
     .col-sm-6
       label Level
-      select.form-control(ng-options="level as level for level in getArray(3)" ng-model="user.level")
+      select.form-control(ng-options="level as level for level in getArray(3,1)" ng-model="user.level")
 .modal-footer
   button.btn.btn-success( ng-click="saveUser()")
     span(ng-show="user.id") Save

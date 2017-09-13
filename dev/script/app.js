@@ -2,10 +2,15 @@ let app = angular.module('testapp', [
   'ui.router',
   'ui.bootstrap',
   'ngAnimate',
-]);
+]).constant('SKILLS', [
+  {name: 'Javascript', color: '#7ec0ff', id: '1'},
+  {name: 'Java', color: '#4b90d7', id: '2'},
+  {name: 'Python', color: '#235d9b', id: '3'},
+  {name: 'C++', color: '#d2e9ff', id: '4'},
+  ]);
 
 if (!Array.prototype.findIndex) {
-  Array.prototype.findIndex = function(predicate) {
+  Array.prototype.findIndex = function (predicate) {
     if (this == null) {
       throw new TypeError('Array.prototype.findIndex called on null or undefined');
     }
@@ -28,7 +33,7 @@ if (!Array.prototype.findIndex) {
 }
 
 if (!Array.prototype.fill) {
-  Array.prototype.fill = function(value) {
+  Array.prototype.fill = function (value) {
 
     if (this == null) {
       throw new TypeError('this is null or not defined');

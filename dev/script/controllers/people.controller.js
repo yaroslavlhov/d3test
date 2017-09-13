@@ -4,7 +4,7 @@
   /**@ngInject*/
 
   app
-    .controller('PeopleCtrl', (UsersFactory, $scope, $uibModal) => {
+    .controller('PeopleCtrl', (UsersFactory, $scope, $uibModal, SKILLS) => {
 
       $scope.getUsers = getUsers;
       $scope.openModal = openModal;
@@ -15,7 +15,7 @@
       $scope.newuser = {
         name: '',
         age: 18,
-        skill: '',
+        skill: SKILLS[0].name,
         level: 1
       };
 
