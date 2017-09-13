@@ -1,0 +1,22 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title angularjs
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    link(rel='stylesheet', href='styles/style.css')
+  body.bg-info
+    div(data-ng-app='testapp')
+      h3.text-center.row
+        .col-xs-5.col-xs-offset-1.col-md-4.col-md-offset-2
+          a.mr-5(ui-sref="people") People
+        .col-xs-5.col-md-4
+          a(ui-sref="visuals") Visuals
+      .container
+        div(ui-view)
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js')
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js')
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-animate.min.js')
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-touch.min.js')
+    script(type='text/javascript', src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js')
+    script(type='text/javascript', src='app.js')

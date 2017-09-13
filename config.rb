@@ -1,8 +1,8 @@
 preferred_syntax = :scss
 http_path = '/'
-css_dir = 'frontend/sass'
-sass_dir = 'frontend/css'
-images_dir = 'frontend/images'
-javascripts_dir = 'frontend/js'
+css_dir = 'dev/sass'
+sass_dir = 'dev/css'
+images_dir = 'dev/images'
+javascripts_dir = 'dev/js'
 relative_assets = true
 line_comments = true
