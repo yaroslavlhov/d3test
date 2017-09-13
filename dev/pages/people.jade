@@ -19,5 +19,5 @@ table.table.table-striped.table-bordered.bg-warning
       td
         i.fa.text-primary(ng-repeat="level in levels track by $index" ng-class="user.level>level ? 'fa-star': 'fa-star-o'")
       td.text-center
-        span.glyphicon.mr-10.glyphicon-edit
-        span.glyphicon.glyphicon-remove-circle
+        span.glyphicon.mr-10.glyphicon-edit(ng-click="openModal(user)")
+        span.glyphicon.glyphicon-remove-circle(ng-click="deleteUser(user.id)")
